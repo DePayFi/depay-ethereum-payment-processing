@@ -2,6 +2,7 @@ import { Signer } from '@ethersproject/abstract-signer'
 import { Contract } from '@ethersproject/contracts'
 import hre from 'hardhat'
 import { DePayRouterV1Configuration } from '../../typechain/DePayRouterV1Configuration'
+import { ETH } from '../utils'
 
 const zeroAddress = '0x0000000000000000000000000000000000000000'
 
@@ -36,11 +37,18 @@ const context: INetworkContext = {
     DePayRouterV1: '0xae60aC8e69414C2Dc362D0e6a03af643d1D85b92',
     DePayRouterV1Payment01: '0x99F3F4685a7178F26EB4F4Ca8B75a1724F1577B9',
     DePayRouterV1Configuration: '0x6EF8833d250f2Df4E7b66ECA01cA5A0D2a34B2fF',
+    // 1InchSwap
     OneSplitAudit: '0xC586BeF4a0992C495Cf22e1aeEE4E446CECDee0E',
+    // Bancor
+    ContractRegistry: '0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4',
+    // ContractRegistry::getName(0x42616e636f724e6574776f726b)
+    BancorNetwork: '',
+    // Third party contracts
+    ETH,
     WETH: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     REVV: '0x557B933a7C2c45672B610F8954A3deB39a51A8Ca',
     DAI: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-    USDC: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
+    USDC: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48   '
   }
 }
 
